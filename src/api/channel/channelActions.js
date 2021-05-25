@@ -1,0 +1,10 @@
+export const GET_CHANNELS = 'GET_CHANNELS';
+export const ADD_NEW_MESSAGE = 'ADD_NEW_MESSAGE';
+export const CREATE_NEW_CHANNEL = 'CREATE_NEW_CHANNEL';
+export const SET_UP_CHOSEN_CHANNEL = 'SET_UP_CHOSEN_CHANNEL';
+export const CREATE_CHANNEL = 'CREATE_CHANNEL';
+export const DELETE_CHANNEL = 'DELETE_CHANNEL';
+export const SUCCESS = '_SUCCESS';
+export const FAILURE = '_FAILURE';
+export const UNAUTHORIZED = '_UNAUTHORIZED';
+export const CHANNEL = 'CAR';

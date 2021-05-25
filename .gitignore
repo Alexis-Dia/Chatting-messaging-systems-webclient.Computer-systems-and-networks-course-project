@@ -1,18 +1,22 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+# webpack bundle
+dist
+dist/*
+/dist
+/dist/**
 
-# Other files and folders
-.settings/
+# node
+node_modules
+/node_modules/*
+.env
+npm-debug.log
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+# idea
+.idea
+.idea/*
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# vsc
+.vscode/*
+
+package-lock.json
+
+

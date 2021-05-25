@@ -1,1 +1,1 @@
-# Module-testing-corse-project-client
+# Web-client for Channel-messaging system for course project.

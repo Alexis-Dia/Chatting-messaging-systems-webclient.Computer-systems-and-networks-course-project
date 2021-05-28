@@ -1,6 +1,6 @@
 import { fork } from 'redux-saga/effects';
 
-import { loginAuthFetch, driversFetch, createUserSaga } from '../api/login/loginSagas';
+import {loginAuthFetch, driversFetch, createUserSaga, changeUserNameFetch} from '../api/login/loginSagas';
 import {addNewMessage, allChannelsFetch, createNewChannel, deleteChannel} from '../api/channel/channelSagas';
 
 // Your sagas for this container
@@ -12,6 +12,7 @@ export default function * rootSaga () {
     fork(allChannelsFetch),
     fork(createNewChannel),
     fork(addNewMessage),
-    fork(deleteChannel)
+    fork(deleteChannel),
+    fork(changeUserNameFetch)
   ]
 }

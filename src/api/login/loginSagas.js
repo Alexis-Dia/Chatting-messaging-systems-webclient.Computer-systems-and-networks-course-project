@@ -1,4 +1,9 @@
-import { fetchAuth, fetchDrivers, createNewUser } from './loginApi';
+import {
+    fetchAuth,
+    fetchDrivers,
+    createNewUser,
+    changeUserNameApi
+} from './loginApi';
 import { takeEvery, call, put } from 'redux-saga/effects';
 import {delay} from "redux-saga";
 import {
@@ -8,9 +13,10 @@ import {
     LOGIN,
     GET_DRIVERS,
     SIGN_UP,
-    USER_WAS_SUCCESSFULLY_CREATED, USER_EXISTS_WITH_THE_SAME_EMAIL
+    USER_WAS_SUCCESSFULLY_CREATED, USER_EXISTS_WITH_THE_SAME_EMAIL, CHANGE_USER_NAME, USERNAME_WAS_SUCCESSFULLY_CHANGED
 } from './loginActions';
 import {ADD_FLASH_MESSAGE, DELETE_BY_VALUE_FLASH_MESSAGES} from "../flash/flashActions";
+import {CHANNEL_WAS_SUCCESSFULLY_CREATED} from "../channel/channelProperties";
 
 export function fetchAuthApi (data) {
     return fetchAuth(data)
@@ -94,4 +100,40 @@ export function * createUser (data) {
 
 export function * createUserSaga () {
     yield takeEvery(SIGN_UP, createUser)
+}
+
+
+
+
+
+
+export function fetchChangeUserNameApi (data) {
+    return changeUserNameApi(data)
+        .then(data => {
+            return { response: data }
+        })
+        .catch(err => {
+            return err
+        })
+}
+
+export function * tryChangeUserNameFetch (data) {
+    const { response, error } = yield call(fetchChangeUserNameApi, data);
+    console.log("response = ", response)
+    let name = data.data.data.name;
+    if (response.httpStatus === 401) {
+        yield put({type: CHANGE_USER_NAME + UNAUTHORIZED, response})
+    } else if (response.httpStatus === 200) {
+        yield put({ type: CHANGE_USER_NAME + SUCCESS, name })
+        yield put({type: ADD_FLASH_MESSAGE, data: {type: "success", text: USERNAME_WAS_SUCCESSFULLY_CHANGED}});
+        yield delay(3000, true);
+        yield put({type: DELETE_BY_VALUE_FLASH_MESSAGES, data: USERNAME_WAS_SUCCESSFULLY_CHANGED})
+    } else {
+        yield put({ type: CHANGE_USER_NAME + FAILURE, error })
+    }
+
+}
+
+export function * changeUserNameFetch () {
+    yield takeEvery(CHANGE_USER_NAME, tryChangeUserNameFetch)
 }

@@ -6,4 +6,6 @@ export const LOGIN = 'LOGIN';
 export const GET_DRIVERS = 'GET_DRIVERS';
 export const USER_WAS_SUCCESSFULLY_CREATED = 'You successfully signed up!';
 export const USER_EXISTS_WITH_THE_SAME_EMAIL = 'User exists with the same email!';
+export const CHANGE_USER_NAME = 'CHANGE_USER_NAME';
 export const SIGN_UP = 'SIGN_UP';
+export const USERNAME_WAS_SUCCESSFULLY_CHANGED = '"Username was successfully changed!"';

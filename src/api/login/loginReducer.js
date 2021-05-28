@@ -1,4 +1,4 @@
-import { DELETE_CURRENT_USER, SUCCESS, FAILURE, LOGIN, GET_DRIVERS } from './loginActions'
+import {DELETE_CURRENT_USER, SUCCESS, FAILURE, LOGIN, GET_DRIVERS, CHANGE_USER_NAME} from './loginActions'
 
 const initialState = {
     isAuthenticated: false,
@@ -45,6 +45,14 @@ const loginReducer = (state = initialState, action = {}) => {
         ...state,
         isAuthenticated: false,
         user: {}
+      };
+
+    case CHANGE_USER_NAME + SUCCESS:
+      let optionalParams = action.name;
+      return  {
+        ...state,
+        isAuthenticated: true,
+        user: {...state.user, name: optionalParams}
       };
 
     default:

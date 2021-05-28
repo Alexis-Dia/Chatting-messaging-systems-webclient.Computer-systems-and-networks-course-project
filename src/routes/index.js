@@ -3,12 +3,13 @@ import Home from './home'
 
 import Channels from './channels'
 import ChannelsManaging from './channelsManaging'
+import Reports from './reports'
 import SignUp from './signUp'
 
 import {
-     EMPTY_PAGE_PATH,
-     VIEW_CHANNELS_MANAGING_PAGE_PATH,
-     VIEW_CHANNELS_PAGE_PATH
+    EMPTY_PAGE_PATH,
+    VIEW_CHANNELS_MANAGING_PAGE_PATH,
+    VIEW_CHANNELS_PAGE_PATH, VIEW_REPORTS_PAGE_PATH
 } from "../properties/properties";
 
 export const createRoutes = (store) => ({
@@ -32,6 +33,14 @@ export const createRoutes = (store) => ({
                 path        : VIEW_CHANNELS_MANAGING_PAGE_PATH,
                 component   : CoreLayout,
                 indexRoute  : ChannelsManaging,
+                childRoutes : [
+                ]
+            },
+
+            {
+                path        : VIEW_REPORTS_PAGE_PATH,
+                component   : CoreLayout,
+                indexRoute  : Reports,
                 childRoutes : [
                 ]
             },

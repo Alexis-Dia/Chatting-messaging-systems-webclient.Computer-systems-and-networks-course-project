@@ -15,7 +15,7 @@ import {
     VIEW_ALL_DRIVERS_PAGE_PATH,
     VIEW_ALL_DRIVERS,
     VIEW_CHANNELS_PAGE_PATH,
-    VIEW_CHANNELS_MANAGING_PAGE_PATH, CHANNELS_MANAGING
+    VIEW_CHANNELS_MANAGING_PAGE_PATH, CHANNELS_MANAGING, VIEW_REPORTS_PAGE_PATH, VIEW_HISTORY_REPORTS
 } from '../../../properties/properties'
 import IconButton from 'material-ui/IconButton';
 import IconMenu from 'material-ui/IconMenu';
@@ -132,6 +132,16 @@ class NavigationBarLayout extends Component {
             currentPage: CHANNELS_MANAGING,
         });
     };
+
+    onClickViewHistoryReports = () => {
+        const path = VIEW_REPORTS_PAGE_PATH;
+        browserHistory.push(path);
+        this.toggleDrawer();
+        this.setState({
+            currentPage: VIEW_HISTORY_REPORTS,
+        });
+    };
+
 
     onClickViewAllDrivers = () => {
         const path = VIEW_ALL_DRIVERS_PAGE_PATH;
@@ -383,6 +393,19 @@ class NavigationBarLayout extends Component {
                                                                     (
                                                                         <MenuItem primaryText="Channels managing"
                                                                                   onClick={this.onClickChannelsManaging}/>
+                                                                    )
+                                                                }
+
+                                                                {(this.props.location.pathname === VIEW_REPORTS_PAGE_PATH)
+                                                                    ?
+                                                                    (
+                                                                        <MenuItem primaryText="View history reports"
+                                                                                  onClick={this.onClickViewHistoryReports}
+                                                                                  style={{backgroundColor: '#FF8F4F'}}/>
+                                                                    ) :
+                                                                    (
+                                                                        <MenuItem primaryText="View history reports"
+                                                                                  onClick={this.onClickViewHistoryReports}/>
                                                                     )
                                                                 }
 

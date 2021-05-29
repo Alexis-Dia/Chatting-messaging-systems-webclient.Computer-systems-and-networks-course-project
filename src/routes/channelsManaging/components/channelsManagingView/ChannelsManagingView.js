@@ -135,8 +135,6 @@ class ChannelsManagingView extends Component {
             }
           }
       )
-      //let map = newList.map(channel => ({ channel }));
-      //console.log("map ", map)
       this.setState({data: newList});
     }
   }
@@ -153,7 +151,6 @@ class ChannelsManagingView extends Component {
             }
         )
         //let map = newList.map(channel => ({ channel }));
-        console.log("newList === ", newList)
         this.setState({data: newList});
       }
     }

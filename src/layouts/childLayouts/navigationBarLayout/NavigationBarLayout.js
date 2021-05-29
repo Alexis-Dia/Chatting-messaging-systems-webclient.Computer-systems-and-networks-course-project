@@ -111,7 +111,6 @@ class NavigationBarLayout extends Component {
             currentPage: INFORMATION,
             topic: null,
         });
-        console.log("this.state = ", this.state)
     };
 
     onClickByTopic = (topic) => {

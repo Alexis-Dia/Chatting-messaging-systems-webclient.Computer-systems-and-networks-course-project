@@ -225,16 +225,11 @@ class ReportsView extends Component {
   }
 
   subscribe = async (lastChosenChannel) => {
-    console.log("subscribe start ")
     let url = 'http://localhost:8080/reports/';
-    let channel = this.state.lastChosenChannel;
-    //url += lastChosenChannel;
     const events = new EventSource(url);
     events.onmessage = event => {
       const parsedData = JSON.parse(event.data);
-      console.log("parsedData = ", parsedData)
       this.setState({data: [parsedData, ...this.state.data]});
-      //this.setState({data: [parsedData, ...this.state.data]
     }
   };
 

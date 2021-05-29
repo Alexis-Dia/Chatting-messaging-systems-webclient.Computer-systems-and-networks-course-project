@@ -119,7 +119,6 @@ export function fetchChangeUserNameApi (data) {
 
 export function * tryChangeUserNameFetch (data) {
     const { response, error } = yield call(fetchChangeUserNameApi, data);
-    console.log("response = ", response)
     let name = data.data.data.name;
     if (response.httpStatus === 401) {
         yield put({type: CHANGE_USER_NAME + UNAUTHORIZED, response})

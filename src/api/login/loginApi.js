@@ -33,10 +33,6 @@ export function changeUserNameApi(ob) {
 
 
 export function changeUserNameApi(ob) {
-  console.log("ob = ", ob)
-  console.log("ob.dat = ", ob.data)
-  console.log("ob.data.data = ", ob.data.data)
-  let url = PATH_METHOD_CHANGE_NICK_NAME+"?userId="+ob.data.data.id+"&name="+ob.data.data.name;
-  console.log("url = ", url)
-  return apiCallForBasicAuth(HOSTNAME, PORT, url, PUT, {} , ob.data.credentials)
+  let URL = PATH_METHOD_CHANGE_NICK_NAME+"?userId="+ob.data.data.id+"&name="+ob.data.data.name;
+  return apiCallForBasicAuth(HOSTNAME, PORT, URL, PUT, {} , ob.data.credentials)
 }

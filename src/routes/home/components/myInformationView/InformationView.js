@@ -28,7 +28,7 @@ class InformationView extends Component {
     super(props);
     this.state = {
       score: 0,
-      name: ''
+      name: this.props.auth.user.name
     }
   }
 

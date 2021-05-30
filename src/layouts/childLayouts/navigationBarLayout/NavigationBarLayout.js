@@ -256,7 +256,7 @@ class NavigationBarLayout extends Component {
             <MuiThemeProvider>
                 <AppBar
                     //title={<img src={require('./img/navigationBarLayout/OrangeryLogo.png')}/>}
-                    title='Chat-system'
+                    title='Chatting-system'
                     style={{backgroundColor: '#ffffff', zIndex: 990}}
                     titleStyle={{color: '#02162c'}}
                     iconElementLeft={

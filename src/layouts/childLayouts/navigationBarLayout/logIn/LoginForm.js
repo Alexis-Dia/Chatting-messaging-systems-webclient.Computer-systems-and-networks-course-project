@@ -55,7 +55,7 @@ class LoginForm extends Component {
         return (
             <div className="logInStyle-1">
                 <form onSubmit={this.onSubmit} >
-                    <h6 style={{marginBottom: '25px'}}>Login to carriages system</h6>
+                    <h6 style={{marginBottom: '25px'}}>Login to chat system</h6>
                     { this.state.auth.user.errors !== '' && <div className="alert alert-danger">{this.state.auth.user.errors}</div>}
                     {/*{ this.props.user.user.errors !== '' && <div className="alert alert-danger">{this.props.user.errors}</div>}*/}
                     <TextFieldGroup

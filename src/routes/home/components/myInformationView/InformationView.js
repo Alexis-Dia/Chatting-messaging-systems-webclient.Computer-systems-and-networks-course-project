@@ -64,12 +64,6 @@ class InformationView extends Component {
 
   changeUsername = () => {
     this.props.changeUserName({
-/*      data: {
-        name: this.state.name,
-        email: this.props.auth.user.email,
-        password: this.props.auth.user.password,
-        userRole: this.props.auth.user.userRole,
-      },*/
       data: {
         id: this.props.auth.user.id,
         name: this.state.name,
@@ -112,13 +106,6 @@ class InformationView extends Component {
                         }
                       </Paper>
                     </Grid>
-
-{/*                    <Grid item xs={12} sm={3}>
-                      <Paper className={classes.paper}>Name</Paper>
-                    </Grid>
-                    <Grid item xs={12} sm={9}>
-                      <Paper className={classes.paper}>{auth.user.name}</Paper>
-                    </Grid>*/}
 
                     <Grid item xs={12} sm={3}>
                       <Paper className={classes.paper}>Id</Paper>

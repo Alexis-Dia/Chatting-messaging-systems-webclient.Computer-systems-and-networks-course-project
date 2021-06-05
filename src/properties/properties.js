@@ -12,7 +12,6 @@ export const PORT = 8080
 export const PATH_METHOD_AUTH_AUTHENTICATE = '/auth/authenticate';
 export const PATH_METHOD_GET_ALL_DRIVERS = '/user/allDrivers';
 export const PATH_METHOD_SIGN_UP = '/user/signUp';
-export const PATH_METHOD_GET_ALL_FREE_CARS = '/car/allFree';
 
 export const PATH_METHOD_GET_ALL_CHANNELS = '/channels/getAllChannels';
 export const PATH_METHOD_CREATE_NEW_CHANNEL = '/channels/createNewChannel';
@@ -35,51 +34,22 @@ export const JSON = 'json';
 export const BEARER = 'Bearer ';
 
 export const ENCODING_UTF8 = 'utf8';
-export const SESSION_TIME_IN_SECONDS = 8;
-export const SECONDS_IN_MINUTE = 60;
-export const MILLISECONDS_IN_SECOND = 1000;
-
-export const TIME_OF_LOG_IN_POP_UP = 3500;
-export const TIME_OF_ASKING_QUESTION_POP_UP = 3500;
-export const TIME_OF_SHOWING_UP_ADDED_COMMENTS = 1500;
-export const TIME_OF_WAITING_AFTER_ASKING = 1500;
-export const TIME_OF_NEW_ALARM_POP_UP = 15000;
-export const TIME_OF_RESOLVED_ALARM = 5000;
-
-export const INDEX_OF_FIRST_POAGE = 0;
-export const MAX_INT_SIZE = 32677;
-
-export const UTC_MIN_TIME_DATA = "2001-01-01 00:00:00";
-export const MINUTES = "minutes";
-export const TWO_HOURS_OFFSET_IN_MINUTES = -120;
-export const SIX_HOURS_OFFSET_IN_MINUTES = -360;
-export const TWENY_FOUR_HOURS_OFFSET_IN_MINUTES = -1440;
-export const WEEK_OFFSET_IN_MINUTES = -34560;
 
 export const JWT_TOKEN = 'jwtToken';
 export const LANGUAGE_DEFAULT = 'EN';
 export const RU = 'RU';
 export const EN = 'EN';
 export const I18 = 'i18';
-export const MIN_NUMBERS_OF_CHARACTERS_IN_QUESTION = 20;
-export const MIN_NUMBERS_OF_CHARACTERS_IN_COMMENT = 5;
 export const EMPTY_STRING = '';
 export const EMPTY_STRING_OBJECT = '{}';
 export const STRING_DASH = '-';
-
-export const POP_UP_MESSAGE_TYPE_PRIMARY = 'primary';
 
 export const EMPTY_PAGE_PATH = '/';
 export const REGISTARATION_PAGE_PATH = '/signUp';
 export const VIEW_ALL_DRIVERS_PAGE_PATH = '/viewDrivers';
 export const VIEW_CHANNELS_MANAGING_PAGE_PATH = '/channelsManaging';
-export const VIEW_REPORTS_PAGE_PATH = '/reportsView';
-export const VIEW_CARS_PAGE_PATH = '/viewCars';
 export const VIEW_CHANNELS_PAGE_PATH = '/viewChannels';
-export const CREATE_CAR_PAGE_PATH = '/createCar';
-export const VIEW_TASKS_PAGE_PATH = '/viewTasks';
-export const VIEW_FREE_TASKS_PAGE_PATH = '/viewFreeTasks';
-export const CREATE_TASK_PAGE_PATH = '/createTask';
+export const VIEW_REPORTS_PAGE_PATH = '/reportsView';
 export const REPORTS_PAGE_PATH = '/reports';
 export const ADD_REPORT_PAGE_PATH = '/addReport';
 
@@ -88,11 +58,6 @@ export const VIEW_ALL_DRIVERS = 'ViewAllDrivers';
 export const CHANNELS_MANAGING = 'ChannelsManaging';
 export const VIEW_HISTORY_REPORTS = 'ViewHistoryReports';
 export const REPORTS = 'Reports';
-export const CREATE_CAR = 'CreateCar';
-export const VIEW_CARS = 'ViewCars';
-export const VIEW_TASKS = 'ViewTasks';
-export const VIEW_FREE_TASKS = 'ViewFreeTasks';
-export const CREATE_TASK = 'CreateTask';
 export const ADD_REPORT = 'Add report';
 
 export const ROLE_DRIVER = 'DRIVER';

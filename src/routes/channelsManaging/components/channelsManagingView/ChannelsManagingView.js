@@ -8,7 +8,6 @@ import { withStyles } from '@material-ui/core/styles';
 import TextField from "@material-ui/core/TextField";
 import {DateTimePicker} from "material-ui-pickers";
 import {
-  VIEW_CARS_PAGE_PATH,
   UTC_FORMAT
 } from "../../../../properties/properties";
 import {ADD_NEW_MESSAGE, CREATE_NEW_CHANNEL, DELETE_CHANNEL} from "../../../../api/channel/channelActions.js";
